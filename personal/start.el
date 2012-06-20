@@ -2,6 +2,7 @@
 
 (add-to-list 'load-path (concat prelude-personal-dir "vendor/"))
 (add-to-list 'load-path (concat prelude-personal-dir "vendor/w3m"))
+(add-to-list 'load-path (concat prelude-personal-dir "vendor/rhtml"))
 
 ;; Decent font
 (add-to-list 'default-frame-alist
@@ -46,5 +47,7 @@
 (require 'sr-speedbar)
 (setq sr-speedbar-width 29)
 (setq sr-speedbar-right-side nil)
+
+(require 'rhtml-mode)
 
 (setq tetris-score-file "~/emacs/personal/tetris")
