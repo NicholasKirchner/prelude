@@ -8,7 +8,7 @@
 ;; nxhtml is not emacs24 compliant yet.
 
 (defvar extra-packages
-  '(gnuplot ess rvm rinari)
+  '(gnuplot ess rvm rinari w3m sr-speedbar)
   "A further list of packages to ensure are installed at launch.")
 
 (dolist (p extra-packages)

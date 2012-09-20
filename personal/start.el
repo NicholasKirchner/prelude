@@ -1,7 +1,7 @@
 ;;Add sr-speedbar & w3m to load paths
 
 (add-to-list 'load-path (concat prelude-personal-dir "vendor/"))
-(add-to-list 'load-path (concat prelude-personal-dir "vendor/w3m"))
+;(add-to-list 'load-path (concat prelude-personal-dir "vendor/w3m"))
 (add-to-list 'load-path (concat prelude-personal-dir "vendor/rhtml"))
 
 ;; Decent font
@@ -22,7 +22,7 @@
 ;; Configure and enable emacs-w3m (Used for rendering HTML in gnus)
 (setq w3m-init-file "~/emacs/personal/w3m/start.el")
 (setq w3m-command "/opt/local/bin/w3m")
-(require 'w3m-load)
+(require 'w3m)
 
 ;; Initialize ESS
 (require 'ess-site)
