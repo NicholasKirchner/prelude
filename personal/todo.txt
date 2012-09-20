@@ -1,0 +1,10 @@
+Goals for gnus-mode-setup:
+
+Gnus mode insists on taking over a whole frame; the command to prevent
+this is buggy.  Therefore, we want the following
+
+1) The gnus frame should have a three-pane view
+2) gnus-init should spawn a new frame for that view
+2a) if gnus is not running, gnus-init must first start gnus
+2b) if gnus is running, gnus-init should put the running gnus on a
+new frame
