@@ -1,4 +1,9 @@
-Goals for gnus-mode-setup:
+-Enable pushing of mail_config.el by eliminating personal email
+ addresses.
+
+-See above for gnus/start.el
+
+-Goals for gnus-mode-setup:
 
 Gnus mode insists on taking over a whole frame; the command to prevent
 this is buggy.  Therefore, we want the following
