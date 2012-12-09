@@ -36,6 +36,20 @@
         '("\\.gnuplot$" . gnuplot-mode))
        auto-mode-alist))
 
+;; load octave-mode for .m files
+(setq auto-mode-alist
+      (append
+       (list
+        '("\\.m$" . octave-mode))
+       auto-mode-alist))
+
+;; load python-mode for .sage files
+(setq auto-mode-alist
+      (append
+       (list
+        '("\\.sage$" . python-mode))
+       auto-mode-alist))
+
 ;; Configure speedbar
 (require 'speedbar)
 (speedbar-add-supported-extension ".rb")
