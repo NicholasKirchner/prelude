@@ -2,7 +2,7 @@
 
 (add-to-list 'load-path (concat prelude-personal-dir "vendor/"))
 ;(add-to-list 'load-path (concat prelude-personal-dir "vendor/w3m"))
-(add-to-list 'load-path (concat prelude-personal-dir "vendor/rhtml"))
+(add-to-list 'load-path "~/emacs/personal/vendor/rhtml")
 
 ;; Decent font
 (add-to-list 'default-frame-alist
