@@ -1,8 +1,8 @@
 ;;Add sr-speedbar & w3m to load paths
 
-(add-to-list 'load-path (concat prelude-personal-dir "vendor/"))
+(add-to-list 'load-path (concat prelude-personal-dir "/vendor"))
 ;(add-to-list 'load-path (concat prelude-personal-dir "vendor/w3m"))
-(add-to-list 'load-path "~/emacs/personal/vendor/rhtml")
+(add-to-list 'load-path (concat prelude-personal-dir "/vendor/rhtml"))
 
 ;; Decent font
 (add-to-list 'default-frame-alist
@@ -16,13 +16,13 @@
 (cd "~")
 
 ;; Enable epa (for encryption of .authinfo)
-(require 'epa)
-(epa-file-enable)
+;(require 'epa)
+;(epa-file-enable)
 
 ;; Configure and enable emacs-w3m (Used for rendering HTML in gnus)
 (setq w3m-init-file "~/emacs/personal/w3m/start.el")
 (setq w3m-command "/opt/local/bin/w3m")
-(require 'w3m)
+;(require 'w3m)
 
 ;; Initialize ESS
 (require 'ess-site)
@@ -56,6 +56,7 @@
 (speedbar-add-supported-extension ".R")
 (speedbar-add-supported-extension ".gp")
 (speedbar-add-supported-extension ".gnuplot")
+(speedbar-add-supported-extension ".cs")
 
 ;; Configure sr-speedbar
 (require 'sr-speedbar)
@@ -64,4 +65,9 @@
 
 (require 'rhtml-mode)
 
+(require 'csv-mode)
+
 (setq tetris-score-file "~/emacs/personal/tetris")
+
+;;Hack to get tab working in terminal.  Watch the ya-snippet bug report.
+(add-hook 'term-mode-hook (lambda() (yas-minor-mode -1)))
