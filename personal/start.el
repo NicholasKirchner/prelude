@@ -1,3 +1,9 @@
+;;(setq mac-control-modifier 'super)
+;;(setq mac-command-modifier 'control)
+
+(setq ls-lisp-use-insert-directory-program t)
+(setq insert-directory-program "gls")
+
 ;;Add sr-speedbar & w3m to load paths
 
 (add-to-list 'load-path (concat prelude-personal-dir "/vendor"))
@@ -71,3 +77,7 @@
 
 ;;Hack to get tab working in terminal.  Watch the ya-snippet bug report.
 (add-hook 'term-mode-hook (lambda() (yas-minor-mode -1)))
+
+;; I like sbcl for programming maxima.  Possible TODO: make a toggle function.
+
+(setq slime-default-lisp 'sbcl)
