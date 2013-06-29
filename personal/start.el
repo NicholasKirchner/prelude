@@ -7,8 +7,6 @@
 ;;Add sr-speedbar & w3m to load paths
 
 (add-to-list 'load-path (concat prelude-personal-dir "/vendor"))
-;(add-to-list 'load-path (concat prelude-personal-dir "vendor/w3m"))
-(add-to-list 'load-path (concat prelude-personal-dir "/vendor/rhtml"))
 
 ;; Decent font
 (add-to-list 'default-frame-alist
@@ -56,8 +54,16 @@
         '("\\.sage$" . python-mode))
        auto-mode-alist))
 
+(setq auto-mode-alist
+      (append
+       (list
+        '("\\.erb$" . rhtml-mode)
+        '("Gemfile" . ruby-mode))
+       auto-mode-alist))
+
 ;; Configure speedbar
 (require 'speedbar)
+(speedbar-add-supported-extension ".erb")
 (speedbar-add-supported-extension ".rb")
 (speedbar-add-supported-extension ".R")
 (speedbar-add-supported-extension ".gp")
